@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My awesome app</title>
+   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js"></script>  
+    <script src="https://www.gstatic.com/firebasejs/live/3.0/firebase.js"></script>
+    <script src="main.controller.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/live/3.0/firebase.js"></script>
+    <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyDcn2e0VQvdIufFc2Poazzb2xuR3AEe5RI",
+      authDomain: "my-awesome-app-402ae.firebaseapp.com",
+      databaseURL: "https://my-awesome-app-402ae.firebaseio.com",
+      storageBucket: "my-awesome-app-402ae.appspot.com",
+    };
+    firebase.initializeApp(config);
+  </script>
+</head>
+
+<body ng-app="myApp">
+  <div ng-controller="MainController as ctrl">
+    <p><input type="text" placeholder="name" ng-model="ctrl.name"></p>
+  
+    <p><input type="text" placeholder="store" ng-model="ctrl.store"></p>
+  
+    <p><input type="number" placeholder="price" ng-model="ctrl.price"></p>
+  
+    <p><input type="file"></p>
+  
+    <button ng-click="ctrl.addPhoto()">Upload!</button>
+  
+  </div>
+
+</body>
+</html>
+
+
