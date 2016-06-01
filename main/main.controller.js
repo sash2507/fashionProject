@@ -9,11 +9,11 @@ angular.module('myApp', [])
     alert(self.store);
     alert(self.price);
 
-  // firebase.database().ref("Submissions/").push({
-  //   name: self.name,
-  //   store: self.store,
-  //   price: self.price
-  // })
+  firebase.database().ref("Submissions/").push({
+    name: self.name,
+    store: self.store,
+    price: self.price
+  })
   };
 })
 
